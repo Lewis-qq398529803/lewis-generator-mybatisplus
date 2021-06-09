@@ -27,7 +27,7 @@ public class GeneratorCode {
      * @param username  --用户名
      * @param password  --用户密码
      */
-    public static void generatorStart(String addressAndPort, String databaseName, String username, String password, String parentPath, String tablesSelected, String moduleName) {
+    public static void generatorStart(String addressAndPort, String databaseName, String username, String password, String parentPath, String tablesSelected, String moduleName, String prefix) {
 
         /* ============================================== 代码生成器 ====================================================*/
         AutoGenerator mpg = new AutoGenerator();
@@ -124,7 +124,7 @@ public class GeneratorCode {
             String[] split = StringUtils.split(tablesSelected, ",");
             strategy.setInclude(split)
                     .setControllerMappingHyphenStyle(true)      //url中驼峰转连字符
-                    .setTablePrefix("qn_")   //生成实体时去掉表前缀
+                    .setTablePrefix(prefix)   //生成实体时去掉表前缀
                     .setLogicDeleteFieldName("deleted");        //逻辑删除字段设置
         }
         mpg.setStrategy(strategy);
@@ -162,6 +162,8 @@ public class GeneratorCode {
                 ",qn_tenant";
         //7、模块名，不填则不设置模块名
         String moduleName = "";
-        generatorStart(ipAndPort, databaseName, userName, password, parentPath, tablesSelected, moduleName);
+        //8、生成表时去掉前缀
+        String prefix = "qn_";
+        generatorStart(ipAndPort, databaseName, userName, password, parentPath, tablesSelected, moduleName, prefix);
     }
 }
