@@ -134,11 +134,17 @@ public class GeneratorCode {
     }
 
     public static void main(String[] args) {
-        String ipAndPort = "localhost:3306";       //1、地址和端口 [114.114.114.114:8888]
-        String databaseName = "tmt_qn_rental_house";             //2、数据库名名 [databaseName]
-        String userName = "root";                      //3、用户名 [userName]
-        String password = "";           //4、用户密码 [password]
-        String parentPath = "com.ruoyi.system";        //5、父包路径 [com.taozi.parent]
+        //1、地址和端口 [114.114.114.114:8888]
+        String ipAndPort = "localhost:3306";
+        //2、数据库名名 [databaseName]
+        String databaseName = "tmt_qn_rental_house";
+        //3、用户名 [userName]
+        String userName = "root";
+        //4、用户密码 [password]
+        String password = "";
+        //5、父包路径 [com.taozi.parent]
+        String parentPath = "com.ruoyi.system";
+        //6、表名，多个英文逗号分割 不填默认生成所有表
         String tablesSelected = "" +
                 "qn_bill" +
                 ",qn_block" +
@@ -153,8 +159,9 @@ public class GeneratorCode {
                 ",qn_lease" +
                 ",qn_manager" +
                 ",qn_message" +
-                ",qn_tenant";                     //6、表名，多个英文逗号分割 不填默认生成所有表
-        String moduleName = "";                         //7、模块名，不填则不设置模块名
+                ",qn_tenant";
+        //7、模块名，不填则不设置模块名
+        String moduleName = "";
         generatorStart(ipAndPort, databaseName, userName, password, parentPath, tablesSelected, moduleName);
     }
 }
