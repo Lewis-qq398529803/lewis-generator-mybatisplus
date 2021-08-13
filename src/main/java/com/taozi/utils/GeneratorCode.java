@@ -19,6 +19,26 @@ import java.util.List;
  */
 public class GeneratorCode {
 
+    public static void main(String[] args) {
+        //1、地址和端口 [114.114.114.114:8888]
+        String ipAndPort = "ipAndPort";
+        //2、数据库名名 [databaseName]
+        String databaseName = "databaseName";
+        //3、用户名 [userName]
+        String userName = "userName";
+        //4、用户密码 [password]
+        String password = "password";
+        //5、父包路径 [com.taozi.parent]
+        String parentPath = "parentPath";
+        //6、表名，多个英文逗号分割 不填默认生成所有表
+        String tablesSelected = "tablesSelected";
+        //7、模块名，不填则不设置模块名
+        String moduleName = "moduleName";
+        //8、生成表时去掉前缀
+        String prefix = "prefix_";
+        generatorStart(ipAndPort, databaseName, userName, password, parentPath, tablesSelected, moduleName, prefix);
+    }
+
     /**
      * 自动生成代码
      * @param addressAndPort    --格式：114.114.114.114:3306
@@ -84,7 +104,7 @@ public class GeneratorCode {
         PackageConfig pc = new PackageConfig();
         //放在哪个包下
         pc.setParent(parentPath)
-                .setEntity("domain")
+                .setEntity("entity")
                 .setMapper("mapper")
                 .setService("service")
                 .setServiceImpl("service.impl")
@@ -162,25 +182,5 @@ public class GeneratorCode {
         mpg.setTemplateEngine(new FreemarkerTemplateEngine());
         //导出
         mpg.execute();
-    }
-
-    public static void main(String[] args) {
-        //1、地址和端口 [114.114.114.114:8888]
-        String ipAndPort = "localhost:3306";
-        //2、数据库名名 [databaseName]
-        String databaseName = "housekeeper";
-        //3、用户名 [userName]
-        String userName = "root";
-        //4、用户密码 [password]
-        String password = "";
-        //5、父包路径 [com.taozi.parent]
-        String parentPath = "com.bfz.app";
-        //6、表名，多个英文逗号分割 不填默认生成所有表
-        String tablesSelected = "ygj_manager_log";
-        //7、模块名，不填则不设置模块名
-        String moduleName = "manager.log";
-        //8、生成表时去掉前缀
-        String prefix = "";
-        generatorStart(ipAndPort, databaseName, userName, password, parentPath, tablesSelected, moduleName, prefix);
     }
 }
