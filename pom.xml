@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.taozi</groupId>
-    <artifactId>generatorcode</artifactId>
+    <artifactId>taozi-generator-mybatisplus</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>generatorcode</name>
+    <name>taozi-generator-mybatisplus</name>
     <description>generatorcode for Merci Mall</description>
     <properties>
         <java.version>1.8</java.version>
