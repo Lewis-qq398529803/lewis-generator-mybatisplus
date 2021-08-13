@@ -1,8 +1,15 @@
-# generatorcode-mybatisplus
+# 桃子-generator-mybatisplus
 
-## 介绍
+## 简介
+
 mybatisplus自动化生成工具
 
 ## 联系
 
-若有交流技术的想法，可以加我建的QQ群：820080257，一起冲鸭！！
+若有任何疑问，可以——
+
+加我QQ：[398529803](https://qm.qq.com/cgi-bin/qm/qr?k=nh1Na88Ead5K7jSWzgXa2XH1lja_IRNB&noverify=0)
+
+和我的QQ群：[820080257](https://jq.qq.com/?_wv=1027&k=9hiRLyoh)
+
+**一起冲鸭！！**
