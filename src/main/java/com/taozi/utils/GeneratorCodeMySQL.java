@@ -17,7 +17,7 @@ import java.util.List;
  * 自动生成mybatisplus的相关代码
  * @author TAOZI
  */
-public class GeneratorCode {
+public class GeneratorCodeMySQL {
 
     public static void main(String[] args) {
         //1、地址和端口 [114.114.114.114:8888]
