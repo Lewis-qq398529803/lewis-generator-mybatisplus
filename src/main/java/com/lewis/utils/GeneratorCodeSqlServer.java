@@ -1,4 +1,4 @@
-package com.taozi.utils;
+package com.lewis.utils;
 
 import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.annotation.IdType;
@@ -17,27 +17,27 @@ import java.util.List;
 /**
  * 自动生成mybatisplus的相关代码 - sqlserver
  *
- * @author TAOZI
+ * @author lewis
  */
 public class GeneratorCodeSqlServer {
 
 	public static void main(String[] args) {
 		//1、地址和端口 [114.114.114.114:8888]
 		String ipAndPort = "114.114.114.114:8888";
-		//2、数据库名名 [databaseName]
-		String databaseName = "databaseName";
+		//2、数据库名 [databaseName]
+		String databaseName = "dataplatformcollect";
 		//3、用户名 [userName]
-		String userName = "userName";
+		String userName = "sa";
 		//4、用户密码 [password]
-		String password = "password";
-		//5、父包路径 [com.taozi.parent]
-		String parentPath = "com.taozi.parent";
+		String password = "1qaz@WSXP@ssw0rd";
+		//5、父包路径 [com.lewis.parent]
+		String parentPath = "com.lewis.app";
 		//6、表名，多个英文逗号分割 不填默认生成所有表
-		String tablesSelected = "tablesSelected";
+		String tablesSelected = "sync_template_list";
 		//7、模块名，不填则不设置模块名
-		String moduleName = "moduleName";
+		String moduleName = "syncTemplateList";
 		//8、生成表时去掉前缀
-		String prefix = "prefix_";
+		String prefix = "";
 		generatorStart(ipAndPort, databaseName, userName, password, parentPath, tablesSelected, moduleName, prefix);
 	}
 
@@ -87,7 +87,7 @@ public class GeneratorCodeSqlServer {
 				//生成基本的SQL片段
 				.setBaseColumnList(true)
 				//生成作者注释
-				.setAuthor("taozi");
+				.setAuthor("lewis");
 
 		mpg.setGlobalConfig(globalConfig);
 

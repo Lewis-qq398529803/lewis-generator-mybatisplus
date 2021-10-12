@@ -1,4 +1,4 @@
-package com.taozi.utils;
+package com.lewis.utils;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.core.toolkit.StringPool;
@@ -15,27 +15,27 @@ import java.util.List;
 
 /**
  * 自动生成mybatisplus的相关代码
- * @author TAOZI
+ * @author lewis
  */
 public class GeneratorCodeMySQL {
 
     public static void main(String[] args) {
         //1、地址和端口 [114.114.114.114:8888]
-        String ipAndPort = "ipAndPort";
+        String ipAndPort = "lewis-mysql:3306";
         //2、数据库名名 [databaseName]
-        String databaseName = "databaseName";
+        String databaseName = "lewis-you";
         //3、用户名 [userName]
-        String userName = "userName";
+        String userName = "root";
         //4、用户密码 [password]
-        String password = "password";
-        //5、父包路径 [com.taozi.parent]
-        String parentPath = "parentPath";
+        String password = "BnHLRt9kI3gN";
+        //5、父包路径 [com.lewis.parent]
+        String parentPath = "com.lewis";
         //6、表名，多个英文逗号分割 不填默认生成所有表
-        String tablesSelected = "tablesSelected";
+        String tablesSelected = "you_user";
         //7、模块名，不填则不设置模块名
-        String moduleName = "moduleName";
+        String moduleName = "";
         //8、生成表时去掉前缀
-        String prefix = "prefix_";
+        String prefix = "";
         generatorStart(ipAndPort, databaseName, userName, password, parentPath, tablesSelected, moduleName, prefix);
     }
 
@@ -84,7 +84,7 @@ public class GeneratorCodeMySQL {
                 //生成基本的SQL片段
                 .setBaseColumnList(true)
                 //生成作者注释
-                .setAuthor("taozi");
+                .setAuthor("lewis");
 
         mpg.setGlobalConfig(globalConfig);
 

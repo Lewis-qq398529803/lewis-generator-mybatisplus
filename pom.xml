@@ -8,10 +8,10 @@
         <version>2.4.2</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.taozi</groupId>
-    <artifactId>taozi-generator-mybatisplus</artifactId>
+    <groupId>com.lewis</groupId>
+    <artifactId>lewis-generator-mybatisplus</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>taozi-generator-mybatisplus</name>
+    <name>lewis-generator-mybatisplus</name>
     <description>generatorcode for Merci Mall</description>
     <properties>
         <java.version>1.8</java.version>
